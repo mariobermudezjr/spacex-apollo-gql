@@ -2,17 +2,9 @@ const { gql } = require('apollo-server');
 
 const typeDefs = gql`
   type Query {
-    launches(
-      """
-      The number of results to show. Must be >= 1. Default = 20
-      """
-      pageSize: Int
-      """
-      If you add a cursor here, it will only return results _after_ this cursor
-      """
-      after: String
-    ): LaunchConnection!
+    launches: [Launch]!
     launch(id: ID!): Launch
+    # Queries for the current user
     me: User
   }
   type Mutation {
