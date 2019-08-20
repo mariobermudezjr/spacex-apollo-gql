@@ -19,7 +19,7 @@ export default function PageContainer(props) {
 const Bar = styled('div')({
   flexShrink: 0,
   height: 12,
-  backgroundColor: colors.primary,
+  backgroundColor: colors.primary
 });
 
 const Container = styled('div')({
@@ -30,5 +30,5 @@ const Container = styled('div')({
   maxWidth: 600,
   margin: '0 auto',
   padding: unit * 3,
-  paddingBottom: unit * 5,
+  paddingBottom: unit * 5
 });

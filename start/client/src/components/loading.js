@@ -16,8 +16,8 @@ const Loading = styled(Logo)(size(64), {
   fill: colors.grey,
   path: {
     transformOrigin: 'center',
-    animation: `${spin} 1s linear infinite`,
-  },
+    animation: `${spin} 1s linear infinite`
+  }
 });
 
 export default Loading;
