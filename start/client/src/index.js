@@ -19,8 +19,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    {/* // Need to check why Pages component is breaking app
-    <Pages /> */}
+    <Pages />
   </ApolloProvider>,
   document.getElementById('root')
 );
