@@ -38,15 +38,15 @@ export default function Header({ image, children = 'Space Explorer' }) {
 const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  marginBottom: unit * 4.5,
+  marginBottom: unit * 4.5
 });
 
 const Image = styled('img')(size(134), props => ({
   marginRight: unit * 2.5,
-  borderRadius: props.round && '50%',
+  borderRadius: props.round && '50%'
 }));
 
 const Subheading = styled('h5')({
   marginTop: unit / 2,
-  color: colors.textSecondary,
+  color: colors.textSecondary
 });
