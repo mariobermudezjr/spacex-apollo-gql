@@ -2,6 +2,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Pages from './pages';
+import { resolvers, typeDefs } from './resolvers';
 
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -15,16 +16,18 @@ const link = new HttpLink({
   }
 });
 
+const client = new ApolloClient({
+  cache,
+  link,
+  typeDefs,
+  resolvers
+});
+
 cache.writeData({
   data: {
     isLoggedIn: !!localStorage.getItem('token'),
     cartItems: []
   }
-});
-
-const client = new ApolloClient({
-  cache,
-  link
 });
 
 ReactDOM.render(
