@@ -38,7 +38,7 @@ export default function Launches() {
 
   return (
     <Fragment>
-      {/* <Header /> */}
+      <Header />
       {data.launches &&
         data.launches.launches &&
         data.launches.launches.map(launch => <LaunchTile key={launch.id} launch={launch} />)}
